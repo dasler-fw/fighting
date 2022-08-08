@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover {
+  transform: scale(1.4);
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: repeat(2, 150px);
+}
+
+.redborder:hover {
+  border: 5px solid red;
+}
+
+.greenborder:hover {
+  border: 5px solid green;
+}
+
+.redborder_choosed {
+  border: 5px solid red;
+}
+
+.greenborder_choosed {
+  border: 5px solid green;
+}
+
+.choosed_fighters {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 102px 102px 102px;
+  grid-gap: 50px;
+  margin-top: 100px;
+}
+
+.button {
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+  color:silver;
+  text-shadow:
+          4px 4px 1px #300000,
+          4px 6px 1px #400000,
+          4px 8px 1px #500000,
+          4px 10px 1px #600000,
+          4px 12px 1px #700000,
+          4px 14px 1px #800000,
+          4px 16px 1px #900000,
+          4px 18px 1px #A00000,
+          4px 20px 1px #B00000,
+          4px 22px 1px #C00000,
+          4px 24px 1px #D00000,
+          4px 26px 1px #E00000,
+          4px 28px 1px #F00000,
+          4px 30px 1px #FA0000,
+          4px 32px 1px #FB0000,
+          4px 34px 1px #FC0000,
+          4px 36px 1px #FD0000,
+          4px 38px 1px #FE0000,
+          4px 40px 2px #FF0000;
+}
+
+.button:hover {
+    transform: scale(1.4);
+
+}
+
+.flip-card {
+    background-color: transparent;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-color: darkred;
+    color: white;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.lost {
+    background-color: darkred;
+    color: white;
+    filter: brightness(15%);
+}
+.infiniteRotation {
+    animation: rotation 0.5s infinite linear;
+}
+
+.winner-text {
+    background-color: darkgreen;
+    color: white;
+}
+
+.loser-text {
+    background-color: darkred;
+    color: white;
+}
+
+.health-container {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hp-line {
+    border: 1px solid;
+    width: 100px;
+}
+
+.hp {
+    overflow: hidden;
+    height: 19px;
+}
